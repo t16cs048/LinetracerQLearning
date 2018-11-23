@@ -197,7 +197,7 @@ public class MyRobot extends Robot {
         forward(1);
     }
 
-    private double getReward1 (int action,int state){
+    private double getReward1 (int action, int state){
         // ゴールにいれば最大
         if (isOnGoal())
             return 100000;
@@ -219,7 +219,7 @@ public class MyRobot extends Robot {
             return 100000;
 
         if (state == 0)
-            return -1000;
+            return -100;
 
         return 100;
     }

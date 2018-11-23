@@ -83,7 +83,7 @@ public class QLearning {
      * @param reward 報酬
      */
     public void update(int before, int action, int after, double reward) {
-        qTable[before][action-1] = qTable[before][action-1] + (reward + getMaxQ(after) - qTable[before][action-1]);
+        qTable[before][action-1] = qTable[before][action-1] + alpha * (reward + getMaxQ(after) - qTable[before][action-1]);
     }
 
 
