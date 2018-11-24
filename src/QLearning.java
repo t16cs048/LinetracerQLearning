@@ -7,6 +7,17 @@ import java.util.Random;
  */
 public class QLearning {
 
+    public QLearning(){}
+
+    public void setAll(int states, int actions, double alpha, double gamma) {
+        this.qTable = new double[states][actions];
+        this.alpha = alpha;
+        this.gamma = gamma;
+        this.states = states;
+        this.actions = actions;
+    }
+
+
     /**
      * Ｑ学習を行うオブジェクトを生成する
      *
