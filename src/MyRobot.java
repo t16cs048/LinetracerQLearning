@@ -10,10 +10,12 @@ public class MyRobot extends Robot {
     public void run() throws InterruptedException {
         // step 1: Q学習する
         // QLearningのインスタンスを作る
-        LinetracerQLearning3 q = new LinetracerQLearning3(this);
+        // LinetracerQLearning3 q = new LinetracerQLearning3(this);
+        // LinetracerQLearning4 q = new LinetracerQLearning4(this);
+        LinetracerQLearning5 q = new LinetracerQLearning5(this);
 
-        int trials = 500; // 強化学習の試行回数
-        int steps = 1000; // 1試行あたりの最大ステップ数
+        int trials = 1000; // 強化学習の試行回数
+        int steps = 2000; // 1試行あたりの最大ステップ数
 
         for (int t = 1; t <= trials; t++) { // 試行回数だけ繰り返し
             init();
@@ -91,6 +93,19 @@ public class MyRobot extends Robot {
         }
         else if(lA == BLACK && lB == BLACK && lC == BLACK){
             state = 7;
+        }
+        // 青を識別する時，以下の状態が加わる
+        else if(lA == WHITE && lB == GREEN && lC == WHITE){
+            state = 8;
+        }
+        else if(lA == WHITE && lB == GREEN && lC == BLACK){
+            state = 9;
+        }
+        else if(lA == BLACK && lB == GREEN && lC == WHITE){
+            state = 10;
+        }
+        else if(lA == BLACK && lB == GREEN && lC == BLACK){
+            state = 11;
         }
 
         return state;
