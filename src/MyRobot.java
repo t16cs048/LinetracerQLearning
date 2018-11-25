@@ -15,7 +15,7 @@ public class MyRobot extends Robot {
         LinetracerQLearning5 q = new LinetracerQLearning5(this);
 
         int trials = 1000; // 強化学習の試行回数
-        int steps = 2000; // 1試行あたりの最大ステップ数
+        int steps = 1500; // 1試行あたりの最大ステップ数
 
         for (int t = 1; t <= trials; t++) { // 試行回数だけ繰り返し
             init();
@@ -37,11 +37,11 @@ public class MyRobot extends Robot {
         ArrayList<Integer> selectActions = new ArrayList<>();
 
         while (true) {
-            // デバッグ用
-            System.out.println("A:" + getColor(LIGHT_A) + " B:" + getColor(LIGHT_B) + " C:" + getColor(LIGHT_C));
-
             // 最適政策を実行する
-            selectActions.add(q.doBestAction());
+            int action = q.doBestAction();
+
+            // 行動をスタックしていく
+            selectActions.add(action);
 
             // 速度調整＆画面描画
             delay();
@@ -95,16 +95,16 @@ public class MyRobot extends Robot {
             state = 7;
         }
         // 青を識別する時，以下の状態が加わる
-        else if(lA == WHITE && lB == GREEN && lC == WHITE){
+        else if(lA == WHITE && lB == BLUE && lC == WHITE){
             state = 8;
         }
-        else if(lA == WHITE && lB == GREEN && lC == BLACK){
+        else if(lA == WHITE && lB == BLUE && lC == BLACK){
             state = 9;
         }
-        else if(lA == BLACK && lB == GREEN && lC == WHITE){
+        else if(lA == BLACK && lB == BLUE && lC == WHITE){
             state = 10;
         }
-        else if(lA == BLACK && lB == GREEN && lC == BLACK){
+        else if(lA == BLACK && lB == BLUE && lC == BLACK){
             state = 11;
         }
 

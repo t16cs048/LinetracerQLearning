@@ -3,8 +3,9 @@
  * 過去の状態数を3つもつ
  * 行動もさせる
  */
-public class LinetracerQLearning4 extends QLearning{
+public class LinetracerQLearning4 implements ILinetracerQLeaning{
     private MyRobot robot; // 呼び出し元のMyRobotのインスタンス
+    private QLearning q;
     private int s0;
     private int s1;
     private int s2;
@@ -20,12 +21,11 @@ public class LinetracerQLearning4 extends QLearning{
      * @param r 呼び出し元のMyRobotのインスタンス
      */
     public LinetracerQLearning4(MyRobot r){
-        super();
         int states = 4096; // 状態数
         int actions = 9; // 行動数
         double alpha = 0.5; // 学習率
         double gamma = 0.5; // 割引率
-        setAll(states, actions, alpha, gamma);
+        this.q = new QLearning(states, actions, alpha, gamma);
 
         this.robot = r;
         initSensorState();
@@ -38,7 +38,7 @@ public class LinetracerQLearning4 extends QLearning{
     public void learning(){
         int state = getState(); // 今の状態を取得
         // epsilon-Greedy 法により行動を選択
-        int action = selectAction(state, 0.3);
+        int action = q.selectAction(state, 0.3);
 
         // 選択した行動をロボットに実行
         doAction(action);
@@ -55,9 +55,13 @@ public class LinetracerQLearning4 extends QLearning{
         double reward = getReward();
 
         // Q値を更新する
-        update(state, action, newState, reward);
+        q.update(state, action, newState, reward);
     }
 
+    /**
+     * 過去2回の行動と，新しい行動を更新する
+     * @param action
+     */
     private void updateAction(int action) {
         a0 = a1;
         a1 = a2;
@@ -66,7 +70,7 @@ public class LinetracerQLearning4 extends QLearning{
     }
 
     /**
-     * 過去2回のセンサーの状態を更新する
+     * 過去2回と現在のセンサーの状態を更新する
      */
     private void updateState() {
         s0 = s1;
@@ -91,11 +95,19 @@ public class LinetracerQLearning4 extends QLearning{
      */
     public int doBestAction(){
         int state = getState();
-        int action = selectAction(state);
+        int action = q.selectAction(state);
         doAction(action);
         updateState();
         return action;
     }
+
+    /**
+     * 学習させたQテーブルを出力する
+     */
+    public void printQTable(){
+        q.printQTable();
+    }
+
 
 
     /**
@@ -133,16 +145,16 @@ public class LinetracerQLearning4 extends QLearning{
             return -100000;
 
         if (s0 == 2 && s1 == 2 && s2 == 2 && s3 == 2)
-            return 10000;
+            return 50000;
 
         if (s1 == 2 && s2 == 2 && s3 == 2)
             return 5000;
 
         if (s2 == 2 && s3 == 2)
-            return 1000;
+            return 5000;
 
         if (s3 == 2)
-            return 100;
+            return 500;
 
         return 5;
     }

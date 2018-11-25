@@ -1,9 +1,12 @@
 /**
  * ライントレーサーのためのQ学習を行うインスタンス
+ * 青マーク対応版
+ * 過去の状態を2回もつ
  * 行動もさせる
  */
-public class LinetracerQLearning5 extends QLearning{
+public class LinetracerQLearning5 implements ILinetracerQLeaning{
     private MyRobot robot; // 呼び出し元のMyRobotのインスタンス
+    private QLearning q;
     private int s0;
     private int s1;
     private int s2;
@@ -17,12 +20,11 @@ public class LinetracerQLearning5 extends QLearning{
      * @param r 呼び出し元のMyRobotのインスタンス
      */
     public LinetracerQLearning5(MyRobot r){
-        super();
         int states = 12*12*12; // 状態数
         int actions = 9; // 行動数
         double alpha = 0.5; // 学習率
         double gamma = 0.5; // 割引率
-        setAll(states, actions, alpha, gamma);
+        this.q = new QLearning(states, actions, alpha, gamma);
 
         this.robot = r;
         initSensorState();
@@ -35,7 +37,7 @@ public class LinetracerQLearning5 extends QLearning{
     public void learning(){
         int state = getState(); // 今の状態を取得
         // epsilon-Greedy 法により行動を選択
-        int action = selectAction(state, 0.3);
+        int action = q.selectAction(state, 0.3);
 
         // 選択した行動をロボットに実行
         doAction(action);
@@ -52,7 +54,7 @@ public class LinetracerQLearning5 extends QLearning{
         double reward = getReward();
 
         // Q値を更新する
-        update(state, action, newState, reward);
+        q.update(state, action, newState, reward);
     }
 
     private void updateAction(int action) {
@@ -85,10 +87,17 @@ public class LinetracerQLearning5 extends QLearning{
      */
     public int doBestAction(){
         int state = getState();
-        int action = selectAction(state);
+        int action = q.selectAction(state);
         doAction(action);
         updateState();
         return action;
+    }
+
+    /**
+     * 学習させたQテーブルを出力する
+     */
+    public void printQTable(){
+        q.printQTable();
     }
 
 
