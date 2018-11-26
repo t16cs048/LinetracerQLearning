@@ -31,8 +31,7 @@ public class MyRobotForNXT6 extends Robot {
         String[] ary = str.split("");
 
         // ロボットの行動を定義したインスタンスを作成
-        Action1 action = new Action1(this);
-
+        AbsAction action = new Action(this);
 
         for (int i = 0; i < ary.length; i++){
             // 最適政策を実行する

@@ -1,5 +1,5 @@
 /**
- * map1における実機NXT用ロボットクラス
+ * map2における実機NXT用ロボットクラス
  */
 public class MyRobotForNXT2 extends Robot {
 
@@ -31,7 +31,7 @@ public class MyRobotForNXT2 extends Robot {
         String[] ary = str.split("");
 
         // ロボットの行動を定義したインスタンスを作成
-        Action1 action = new Action1(this);
+        AbsAction action = new Action(this);
 
 
         for (int i = 0; i < ary.length; i++){

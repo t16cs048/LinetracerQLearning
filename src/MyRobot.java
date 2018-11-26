@@ -10,11 +10,9 @@ public class MyRobot extends Robot {
     public void run() throws InterruptedException {
         // step 1: Q学習する
         // ライントレーサー用でQLearningをさせるためのインスタンスを作る
-        // LinetracerQLearning3 q = new LinetracerQLearning3(this);
 
         // 青マーク対応版のQLeaningクラス
-        // LinetracerQLearning5 q = new LinetracerQLearning5(this);
-        LinetracerQLearning6 q = new LinetracerQLearning6(this);
+        LinetracerQLearning q = new LinetracerQLearning(this);
 
         int trials = 1000; // 強化学習の試行回数
         int steps = 700; // 1試行あたりの最大ステップ数
@@ -59,8 +57,8 @@ public class MyRobot extends Robot {
     }
 
     /**
-     *
-     * @return
+     * センサーが読み取った状態を整数に直して返す
+     * @return センサーの状態
      */
     public int getSensorState(){
         // 戻り値の変数

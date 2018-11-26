@@ -1,7 +1,7 @@
 /**
- * MyRobotが保持するLintracerQLeaningから呼び出すメソッドのインターフェース
+ * MyRobotが保持するLinetracerQLearningから呼び出すメソッドのインターフェース
  */
-public interface ILinetracerQLeaning {
+public interface ILinetracerQLearning {
     void learning();
     void initSensorState();
     int doBestAction();

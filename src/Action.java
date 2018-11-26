@@ -1,23 +1,14 @@
 /**
  * 行動を定義したクラス
  */
-public class Action1 extends Action {
+public class Action extends AbsAction {
     private int actionNum = 9;
     private Robot robot;
 
-    public Action1(Robot r){
+    public Action(Robot r){
         this.robot = r;
     }
 
-    /*
-    public Action1(MyRobot r){
-        this.robot = r;
-    }
-
-    public Action1(MyRobotForNXT6 r){
-        this.NXTrobot = r;
-    }
-    */
 
     public int getActionNum() {
         return actionNum;
