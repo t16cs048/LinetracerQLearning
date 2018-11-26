@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * ロボットクラスの作成例：単純なライントレーサーロボット
+ * ライントレーサーロボット
  */
 public class MyRobot extends Robot {
     /**
@@ -9,13 +9,15 @@ public class MyRobot extends Robot {
      */
     public void run() throws InterruptedException {
         // step 1: Q学習する
-        // QLearningのインスタンスを作る
+        // ライントレーサー用でQLearningをさせるためのインスタンスを作る
         // LinetracerQLearning3 q = new LinetracerQLearning3(this);
-        // LinetracerQLearning4 q = new LinetracerQLearning4(this);
-        LinetracerQLearning5 q = new LinetracerQLearning5(this);
+
+        // 青マーク対応版のQLeaningクラス
+        // LinetracerQLearning5 q = new LinetracerQLearning5(this);
+        LinetracerQLearning6 q = new LinetracerQLearning6(this);
 
         int trials = 1000; // 強化学習の試行回数
-        int steps = 1500; // 1試行あたりの最大ステップ数
+        int steps = 700; // 1試行あたりの最大ステップ数
 
         for (int t = 1; t <= trials; t++) { // 試行回数だけ繰り返し
             init();
@@ -94,19 +96,20 @@ public class MyRobot extends Robot {
         else if(lA == BLACK && lB == BLACK && lC == BLACK){
             state = 7;
         }
-        // 青を識別する時，以下の状態が加わる
+        // 状態数を減らすため，青を識別した時，状態は黒と同じものとする
         else if(lA == WHITE && lB == BLUE && lC == WHITE){
-            state = 8;
+            state = 2;
         }
         else if(lA == WHITE && lB == BLUE && lC == BLACK){
-            state = 9;
+            state = 3;
         }
         else if(lA == BLACK && lB == BLUE && lC == WHITE){
-            state = 10;
+            state = 6;
         }
         else if(lA == BLACK && lB == BLUE && lC == BLACK){
-            state = 11;
+            state = 7;
         }
+
 
         return state;
     }

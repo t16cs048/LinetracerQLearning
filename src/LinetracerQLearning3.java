@@ -5,6 +5,7 @@
  */
 public class LinetracerQLearning3 implements ILinetracerQLeaning{
     private MyRobot robot; // 呼び出し元のMyRobotのインスタンス
+    private Action action;
     private QLearning q;
     private int s0;
     private int s1;
@@ -19,13 +20,15 @@ public class LinetracerQLearning3 implements ILinetracerQLeaning{
      * @param r 呼び出し元のMyRobotのインスタンス
      */
     public LinetracerQLearning3(MyRobot r){
+        this.robot = r;
+        this.action = new Action1(r);
+
         int states = 512; // 状態数
-        int actions = 9; // 行動数
+        int actions = action.getActionNum(); // 行動数
         double alpha = 0.5; // 学習率
         double gamma = 0.5; // 割引率
         this.q = new QLearning(states, actions, alpha, gamma);
 
-        this.robot = r;
         initSensorState();
     }
 
@@ -36,15 +39,15 @@ public class LinetracerQLearning3 implements ILinetracerQLeaning{
     public void learning(){
         int state = getState(); // 今の状態を取得
         // epsilon-Greedy 法により行動を選択
-        int action = q.selectAction(state, 0.3);
+        int actionNum = q.selectAction(state, 0.3);
 
         // 選択した行動をロボットに実行
-        doAction(action);
+        action.run(actionNum);
         // 過去の状態も合わせて，状態を更新する
         updateState();
 
         // 過去2回の行動を更新する
-        updateAction(action);
+        updateAction(actionNum);
 
         // 行動後の新しい状態を観測
         int newState = getState();
@@ -53,7 +56,7 @@ public class LinetracerQLearning3 implements ILinetracerQLeaning{
         double reward = getReward();
 
         // Q値を更新する
-        q.update(state, action, newState, reward);
+        q.update(state, actionNum, newState, reward);
     }
 
     private void updateAction(int action) {
@@ -86,10 +89,10 @@ public class LinetracerQLearning3 implements ILinetracerQLeaning{
      */
     public int doBestAction(){
         int state = getState();
-        int action = q.selectAction(state);
-        doAction(action);
+        int actionNum = q.selectAction(state);
+        action.run(actionNum);
         updateState();
-        return action;
+        return actionNum;
     }
 
     /**
@@ -110,39 +113,31 @@ public class LinetracerQLearning3 implements ILinetracerQLeaning{
 
 
     /**
-     *
-     * @param action
+     * 報酬関数
+     * @return robotの状態に応じた報酬を返す
      */
-    private void doAction(int action){
-        int angle = 15 * (action - 5);
-
-        double speed = 0;
-        if (action < 6)
-            speed = 0.2 * action;
-        else
-            speed = 2.0 - (0.2 * action);
-
-        robot.rotate(angle);
-        robot.forward(speed);
-    }
-
     private int getReward() {
+        // ゴールにいる時最大の報酬
         if (robot.isOnGoal())
             return 20000;
 
-        // ライン外
+        // ライン外にいる時のみ負の報酬
         if (s2 == 0)
             return -10000;
 
+        // 過去2回と現在において，黒のライン上にいる場合
         if (s0 == 2 && s1 == 2 && s2 == 2)
             return 5000;
 
+        // 過去1回と現在において黒のライン上にいる場合
         if (s1 == 2 && s2 == 2)
             return 1000;
 
+        // 現在のみ黒のライン上にいる場合
         if (s2 == 2)
             return 100;
 
+        // それ以外は少しだけ報酬を与える
         return 10;
     }
 

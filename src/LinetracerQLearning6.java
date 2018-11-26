@@ -4,23 +4,22 @@
  * 過去の状態を2回もつ
  * 行動もさせる
  */
-public class LinetracerQLearning5 implements ILinetracerQLeaning{
+public class LinetracerQLearning6 implements ILinetracerQLeaning{
     private MyRobot robot; // 呼び出し元のMyRobotのインスタンス
     private Action action;
     private QLearning q;
     private int s0;
     private int s1;
     private int s2;
-    private int a0 = 0;
-    private int a1 = 0;
-    private int a2 = 0;
+    private int previousStatesNum;
+    private int previousStates[];
 
 
     /**
      *
      * @param r 呼び出し元のMyRobotのインスタンス
      */
-    public LinetracerQLearning5(MyRobot r){
+    public LinetracerQLearning6(MyRobot r){
         this.robot = r;
         this.action = new Action1(r);
 
@@ -30,7 +29,8 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
         double gamma = 0.5; // 割引率
         this.q = new QLearning(states, actions, alpha, gamma);
 
-
+        this.previousStatesNum = 7;
+        this.previousStates = new int[previousStatesNum];
         initSensorState();
     }
 
@@ -48,8 +48,6 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
         // 過去の状態も合わせて，状態を更新する
         updateState();
 
-        // 過去2回の行動を更新する
-        updateAction(actionNum);
 
         // 行動後の新しい状態を観測
         int newState = getState();
@@ -61,28 +59,32 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
         q.update(state, actionNum, newState, reward);
     }
 
-    private void updateAction(int action) {
-        a0 = a1;
-        a1 = a2;
-        a2 = action;
-    }
+
 
     /**
      * 過去2回のセンサーの状態を更新する
      */
     private void updateState() {
-        s0 = s1;
-        s1 = s2;
-        s2 = robot.getSensorState();
+        for (int i = 0; i < previousStatesNum - 1; i++){
+            previousStates[i] = previousStates[i+1];
+        }
+        previousStates[previousStatesNum-1] = robot.getSensorState();
+
+        s0 = previousStates[0]; // 保持している過去の状態の中で，最古のもの
+        s1 = previousStates[previousStatesNum/2]; // 保持している過去の状態の中で，中間のもの
+        s2 = previousStates[previousStatesNum-1]; // 最新の状態
     }
 
     /**
      * センサーの状態を初期化する
      */
     public void initSensorState() {
+        for (int i = 0; i < previousStatesNum; i++){
+            previousStates[i] = robot.getSensorState();
+        }
         s0 = robot.getSensorState();
-        s0 = robot.getSensorState();
-        s0 = robot.getSensorState();
+        s1 = robot.getSensorState();
+        s2 = robot.getSensorState();
     }
 
     /**
@@ -116,8 +118,10 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
 
     private int getReward() {
         // ゴールにいる時最大の報酬を与える
+
         if (robot.isOnGoal())
-            return 50000;
+            return 20000;
+
 
         /*
         // ライン外の場合のみ負の報酬
@@ -125,11 +129,9 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
             return -10000;
         */
 
-
         // 過去2回と現在において，黒のライン上にいる場合
         if (s0 == 2 && s1 == 2 && s2 == 2)
             return 10000;
-
 
         /*
         if (s0 == 2 || s0 == 3 || s0 == 6 || s0 == 7){
@@ -142,7 +144,7 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
         }
         */
 
-        /*
+
         // 過去1回と現在において黒のライン上にいる場合
         if (s1 == 2 && s2 == 2)
             return 1000;
@@ -150,8 +152,8 @@ public class LinetracerQLearning5 implements ILinetracerQLeaning{
 
         // 現在のみ黒のライン上にいる場合
         if (s2 == 2)
-            return 10000;
-        */
+            return 100;
+
 
         // 上記以外は少しだけ報酬を与える
         return -10000;
