@@ -2,40 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b0bb6b7-eb34-4598-be92-69a0d6e04d11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MyRobotForNXT3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyRobotForNXT4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyRobotForNXT5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyRobotForNXT7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyRobotForNXT8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyRobotForNXT9.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myMark/map7-fuji.png" beforeDir="false" afterPath="$PROJECT_DIR$/myMark/map7-fuji.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myMark/map8-suzuka.png" beforeDir="false" afterPath="$PROJECT_DIR$/myMark/map8-suzuka.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myMark/map9-amida.png" beforeDir="false" afterPath="$PROJECT_DIR$/myMark/map9-amida.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/linetracerLCL-template/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/Action1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/Action2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/ILinetracerQLeaning.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/LinetracerQLearning3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/LinetracerQLearning4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/LinetracerQLearning5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/LinetracerQLearning6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobotForNXT1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobotForNXT1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobotForNXT2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobotForNXT2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobotForNXT6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/linetracerLCL-template/MyRobotForNXT6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AbsAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Action.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Action2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ILinetracerQLeaning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ILinetracerQLearning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinetracerQLearning3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinetracerQLearning4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinetracerQLearning5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LinetracerQLearning6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinetracerQLearning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyRobot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyRobot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyRobotForNXT1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyRobotForNXT1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyRobotForNXT2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyRobotForNXT2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyRobotForNXT6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyRobotForNXT6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinetracerQLearning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinetracerQLearning.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,12 +59,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="8227" />
+          <entry key="java" value="8315" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8227" />
+          <entry key="JAVA" value="8315" />
           <entry key="PLAIN_TEXT" value="13" />
         </counts>
       </usages-collector>
@@ -116,86 +83,23 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.50272036">
       <split-first>
-        <splitter split-orientation="vertical" split-proportion="0.5656051">
+        <splitter split-orientation="vertical" split-proportion="0.7324841">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/MyRobot.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="582">
-                      <caret line="68" column="35" lean-forward="true" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+                    <state relative-caret-position="-301">
+                      <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
                     </state>
                   </provider>
                 </entry>
               </file>
               <file pinned="false" current-in-tab="true">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT6.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="237">
-                      <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT3.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="217">
-                      <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT4.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-255">
-                      <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="27" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT5.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="178">
-                      <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT7.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="267">
-                      <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT8.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="218">
-                      <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT9.java">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="201">
-                      <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/LinetracerQLearning.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="2070">
-                      <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+                    <state relative-caret-position="270">
+                      <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
                       <folding>
                         <element signature="e#2149#2150#0" expanded="true" />
                         <element signature="e#2180#2181#0" expanded="true" />
@@ -243,29 +147,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/MyRobot.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="235">
-                  <caret line="63" column="17" lean-forward="true" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT1.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="183">
-                  <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT2.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-line="46" selection-end-column="1" />
+                <state relative-caret-position="319">
+                  <caret line="58" selection-start-line="58" selection-end-line="58" />
                 </state>
               </provider>
             </entry>
@@ -335,7 +221,6 @@
         <option value="$PROJECT_DIR$/src/LinetracerQLearning5.java" />
         <option value="$PROJECT_DIR$/src/LinetracerQLearning6.java" />
         <option value="$PROJECT_DIR$/src/Action1.java" />
-        <option value="$PROJECT_DIR$/src/LinetracerQLearning.java" />
         <option value="$PROJECT_DIR$/src/Action.java" />
         <option value="$PROJECT_DIR$/src/MyRobot.java" />
         <option value="$PROJECT_DIR$/src/ILinetracerQLeaning.java" />
@@ -347,9 +232,10 @@
         <option value="$PROJECT_DIR$/src/MyRobotForNXT5.java" />
         <option value="$PROJECT_DIR$/src/MyRobotForNXT7.java" />
         <option value="$PROJECT_DIR$/src/MyRobotForNXT8.java" />
-        <option value="$PROJECT_DIR$/src/MyRobotForNXT9.java" />
         <option value="$PROJECT_DIR$/src/MyRobotForNXT1.java" />
+        <option value="$PROJECT_DIR$/src/MyRobotForNXT9.java" />
         <option value="$PROJECT_DIR$/src/MyRobotForNXT3.java" />
+        <option value="$PROJECT_DIR$/src/LinetracerQLearning.java" />
       </list>
     </option>
   </component>
@@ -396,7 +282,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543222750058" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543223842957" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -423,7 +309,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.NXT9">
+  <component name="RunManager" selected="Application.map6">
     <configuration name="NXT1" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Simulator" />
       <module name="linetracerLCL-template" />
@@ -617,18 +503,18 @@
       <workItem from="1542887950400" duration="18681000" />
       <workItem from="1542911118955" duration="2139000" />
       <workItem from="1542951390426" duration="12536000" />
-      <workItem from="1542968002144" duration="40458000" />
+      <workItem from="1542968002144" duration="41596000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76550000" />
+    <option name="totallyTimeSpent" value="77688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21030043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -654,7 +540,7 @@
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info anchor="right" id="Run" order="9" visible="true" weight="0.19527897" />
+      <window_info active="true" anchor="right" id="Run" order="9" visible="true" weight="0.27181688" />
       <window_info anchor="right" id="Messages" order="10" weight="0.3297568" />
     </layout>
     <layout-to-restore>
@@ -828,26 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinetracerQLearning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2070">
-          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
-          <folding>
-            <element signature="e#2149#2150#0" expanded="true" />
-            <element signature="e#2180#2181#0" expanded="true" />
-            <element signature="e#2281#2282#0" expanded="true" />
-            <element signature="e#2322#2323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyRobot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="68" column="35" lean-forward="true" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ILinetracerQLearning.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -855,66 +721,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT7.java">
+    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT9.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT8.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
+        <state relative-caret-position="434">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT7.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
           <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="46" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT9.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="27" />
+        <state relative-caret-position="45">
+          <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="75">
+          <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT5.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="480">
           <caret line="32" column="32" lean-forward="true" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="17" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyRobotForNXT6.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
+        <state relative-caret-position="600">
           <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyRobot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-301">
+          <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinetracerQLearning.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="e#2149#2150#0" expanded="true" />
+            <element signature="e#2180#2181#0" expanded="true" />
+            <element signature="e#2281#2282#0" expanded="true" />
+            <element signature="e#2322#2323#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

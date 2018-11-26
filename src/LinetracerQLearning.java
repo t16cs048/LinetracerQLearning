@@ -119,6 +119,11 @@ public class LinetracerQLearning implements ILinetracerQLearning {
     }
 
 
+    /**
+     * 報酬関数
+     * 過去２つと現在の状態から報酬を決定する
+     * @return 与えられる報酬
+     */
     private int getReward() {
         // ゴールにいる時最大の報酬を与える
         if (robot.isOnGoal())
@@ -128,7 +133,6 @@ public class LinetracerQLearning implements ILinetracerQLearning {
         if (s0 == 2 && s1 == 2 && s2 == 2)
             return 10000;
 
-
         // 過去1回と現在において黒のライン上にいる場合
         if (s1 == 2 && s2 == 2)
             return 1000;
@@ -136,7 +140,6 @@ public class LinetracerQLearning implements ILinetracerQLearning {
         // 現在のみ黒のライン上にいる場合
         if (s2 == 2)
             return 100;
-
 
         // 上記以外は負の報酬を与える
         return -10000;
